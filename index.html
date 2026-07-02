@@ -1,11 +1,11 @@
 <!DOCTYPE html>
  <html>
   <body>
-  <h1>Time left till Lahore Grammar School digital MUN</h1>
+  <h1>Time left till LGS virtual MUN (first edition):</h1>
   <script>
   const instant = Temporal.Now.instant();
-  const timezone = instant.toZonedDateTimeISO("Asia/Pakistan");
-  const mun_day = Temporal.ZonedDateTime.from("2026-07-21T09:00:00[Asia/Pakistan]");
+  const timezone = instant.toZonedDateTimeISO("Asia/Samarkand");
+  const mun_day = Temporal.ZonedDateTime.from("2026-07-21T09:00:00[Asia/Samarkand]");
   const timer = timezone.until(mun_day);
   console.log(timer.toString()); </script>
   </body>
