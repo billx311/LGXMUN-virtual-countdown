@@ -1,8 +1,9 @@
 <!DOCTYPE html>
  <html>
   <body>
-  <h1>Time left till LGS virtual MUN (first edition):</h1>
+  <h1 style="font-family:arial; color:DarkBlue;">Time left till LGS virtual MUN (first edition):</h1>
   <p id = "countdown"></p>
+  <script src="https://cdn.jsdelivr.net/npm/@js-temporal/polyfill/dist/index.umd.js"></script>
   <script>
   setInterval(() => {
   const instant = Temporal.Now.instant();
@@ -12,6 +13,5 @@
   document.getElementById("countdown").textContent = timer.toString();  
   }, 1000);
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/@js-temporal/polyfill/dist/index.umd.js"></script>
   </body>
  </html>
