@@ -2,11 +2,15 @@
  <html>
   <body>
   <h1>Time left till LGS virtual MUN (first edition):</h1>
+  <p>id = "countdown"</p>
   <script>
+  setInterval(() => {
   const instant = Temporal.Now.instant();
   const timezone = instant.toZonedDateTimeISO("Asia/Samarkand");
   const mun_day = Temporal.ZonedDateTime.from("2026-07-21T09:00:00[Asia/Samarkand]");
   const timer = timezone.until(mun_day);
-  console.log(timer.toString()); </script>
+  document.getElementById("countdown").textContent = timer.toString();  
+  }, 1000);
+  </script>
   </body>
  </html>
