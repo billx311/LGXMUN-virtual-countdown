@@ -4,8 +4,10 @@
    <title>countdown</title>
   </head>
   <body>
-  <h1 style="font-family:arial; color:DarkBlue; text-align:center;">Time left till LGS virtual MUN (first edition):</h1>
-  <p id = "countdown"></p>
+  <h1 style = "font-family:arial; text-align:centre;">Virtual LGXMUN (first edition) starting time: 22 July 2026, 9AM</h1>
+  <h2 style="font-family:arial; color:DarkBlue; text-align:center;">Time left:</h2>
+   
+  <p id = "countdown" style = "font-family:arial; color:Gold; text-align:center; font-size:35px;"></p>
   <script>
   function updateCountdown() {
   const now = new Date();
@@ -16,7 +18,7 @@
   const mins = Math.floor(diff / (1000 * 60) % 60);
   const seconds = Math.floor(diff / (1000) % 60);
   
-  document.getElementById("countdown").textContent = `${days}d, ${hours}h, ${mins}m, ${seconds}s`;
+  document.getElementById("countdown").textContent = `${days}days, ${hours}hours, ${mins}minutes, ${seconds}seconds`;
   }
   updateCountdown();
   setInterval(updateCountdown, 1000);
