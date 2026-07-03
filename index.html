@@ -7,7 +7,20 @@
   <h1 style="font-family:arial; color:DarkBlue; text-align:center;">Time left till LGS virtual MUN (first edition):</h1>
   <p id = "countdown"></p>
   <script>
-  document.getElementById("countdown").textContent = "hi";
+  function updateCountdown() {
+  const now = new Date();
+  const mun_day = new Date("2026-07-22T09:00:00+05:00");
+  const diff = mun_day-now;
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(diff / (1000 * 60 * 60) % 24);
+  const mins = Math.floor(diff / (1000 * 60) % 60);
+  const seconds = Math.floor(diff / (1000) % 60);
+  
+  document.getElementById("countdown").textContent = `${days}d, ${hours}h, ${mins}m, ${seconds}s`;
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+  
   </script>
   </body>
  </html>
