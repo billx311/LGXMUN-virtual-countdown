@@ -6,16 +6,8 @@
   <body>
   <h1 style="font-family:arial; color:DarkBlue; text-align:center;">Time left till LGS virtual MUN (first edition):</h1>
   <p id = "countdown"></p>
-  <script src="https://cdn.jsdelivr.net/npm/@js-temporal/polyfill/dist/index.umd.js"></script>
   <script>
-  console.log(typeof Temporal);
-  setInterval(() => {
-  const instant = Temporal.Now.instant();
-  const timezone = instant.toZonedDateTimeISO("Asia/Samarkand");
-  const mun_day = Temporal.ZonedDateTime.from("2026-07-21T09:00:00[Asia/Samarkand]");
-  const timer = timezone.until(mun_day);
-  document.getElementById("countdown").textContent = timer.toString();  
-  }, 1000);
+  document.getElementById("countdown").textContent = "hi";
   </script>
   </body>
  </html>
